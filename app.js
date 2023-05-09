@@ -9,7 +9,8 @@ app.get('/', function (req, res) {
     res.json(
         { 
           message: "Welcome to Sample Node application",
-          body: parameter
+          body: parameter,
+          end: "record end"
         }
       );
 });
