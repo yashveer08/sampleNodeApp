@@ -1,9 +1,19 @@
 var express = require('express');
 var app = express();
+require('dotenv').config();
+
 app.get('/', function (req, res) {
     console.log("Server started!!");
-    res.json({ message: "Welcome to Sample Node application" });
+    parameter = process.env.NODE_PARAMETER;
+    console.log("parameter", parameter);
+    res.json(
+        { 
+          message: "Welcome to Sample Node application",
+          body: parameter
+        }
+      );
 });
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
