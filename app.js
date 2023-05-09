@@ -4,8 +4,10 @@ require('dotenv').config();
 
 app.get('/', function (req, res) {
     console.log("Server started!!");
-    parameter = process.env.NODE_PARAMETER;
+    const parameter = process.env.NODE_PARAMETER;
+    const vari = process.env.Param;
     console.log("parameter", parameter);
+    console.log("parameter 2 is here", vari);
     res.json(
         { 
           message: "Welcome to Sample Node application",
